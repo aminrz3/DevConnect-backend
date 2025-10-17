@@ -12,7 +12,7 @@ format:
 	poetry run isort .
 
 test:
-	poetry run pytest -v --disable-warnings
+	poetry run pytest
 
 docker-build:
 	docker build -t devconnect .

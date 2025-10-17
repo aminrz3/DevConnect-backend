@@ -46,6 +46,13 @@ init_forbid_extra = true
 init_typed = true
 warn_required_dynamic_aliases = true
 
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --disable-warnings"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
