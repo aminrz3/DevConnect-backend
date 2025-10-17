@@ -4,8 +4,8 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     ENV: str = "dev"
     DEBUG: bool = True
-    DATABASE_URL: str
-    REDIS_URL: str
+    DATABASE_URL: str = "postgresql://user:pass@localhost/db"
+    REDIS_URL: str = "redis://localhost:6379"
 
     class Config:
         env_file = ".env"
